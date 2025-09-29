@@ -1,0 +1,12 @@
+function angle = QueToEul(q0,q1,q2,q3)
+
+
+phi = atan2(2*(q0*q1+q2*q3),1-2*(q1^2+q2^2));
+theta = asin(2*(q0*q2-q3*q1));
+psi = atan2(2*(q0*q3+q1*q2),1-2*(q2^2+q3^2));
+% phi = sign(real(phi))*norm(phi);
+% theta = sign(real(theta))*norm(theta);
+% psi = sign(real(psi))*norm(psi);
+angle = [phi,theta,psi];
+
+end
